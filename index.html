@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head-->
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Vue-Shop</title>
+    <!--styles-->
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
+  </head>
+  <!-- body-->
+  <body>
+    <!-- header-->
+    <header class="header">
+      <div class="container">
+        <div class="header-information">
+          <div class="header-information--item">
+            <p>Vue playground</p>
+          </div>
+          <div class="header-information--item">
+            <p>Building shop</p>
+          </div>
+        </div>
+        <div class="header-login"><img src="./images/svg/log-in.svg" alt=""/><a href="#">Login</a>
+          <p>/</p><a href="#">Register</a>
+        </div>
+      </div>
+    </header>
+    <!-- main-->
+    <main class="home">
+      <section class="home-head">
+        <div class="home-head--information">
+          <div class="container"><a class="logotype" href="#"><img src="./images/svg/logo-head.svg" alt=""/></a>
+            <div class="navigation">
+              <div class="navigation-list"><a class="navigation-list--item" href="#">
+                  <p>Items</p></a><a class="navigation-list--item" href="#">
+                  <p>News</p></a><a class="navigation-list--item" href="#">
+                  <p>Contacts</p></a></div>
+              <div class="navigation-links"><a href="#"><img src="./images/svg/cart.svg" alt=""/></a><a href="#"><img src="./images/svg/search.svg" alt=""/></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-test">
+        <div class="container">
+          <div class="title-block">
+            <div class="title-block--text">
+              <p>Vue test</p>
+            </div>
+            <div class="title-block--line"></div>
+          </div>
+          <div class="home-test--block" id="app"><span v-if="seen">{{ message }}</span>
+            <ol>
+              <todo-item v-for="item in list" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+            </ol>
+            <button class="vue-btn" v-on:click="reverseMessage"><span>Reverse btn</span></button>
+          </div>
+        </div>
+      </section>
+      <section class="home-items">
+        <div class="container">
+          <div class="title-block">
+            <div class="title-block--text">
+              <p>New items</p>
+            </div>
+            <div class="title-block--line"></div>
+          </div>
+          <div class="home-items--rows"><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a><a class="item" href="#">
+              <div class="item-img"><img src="./images/item.png" alt=""/>
+              </div>
+              <div class="item-text">
+                <p class="item-name">Louis XVI ATHOS</p>
+                <div class="item-price">165 000 руб.</div>
+              </div></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-copyright">
+          <p>© 2021 Все права защищены</p>
+        </div>
+        <div class="footer-poweredBy"><a href="#">Сделано Max & donne93</a></div>
+      </div>
+    </footer>
+    <!-- scripts-->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/svg4everybody.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/vue.js"></script>
+    <!-- REMOVE THIS SCRIPT \/ ON REAL SITE-->
+    <script src="./js/developer-script.js"></script>
+    <!-- REMOVE THIS SCRIPT /\ ON REAL SITE-->
+  </body>
+</html>
