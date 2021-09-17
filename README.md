@@ -1,2 +1,0 @@
-# Vue-playground
-Vue learning
